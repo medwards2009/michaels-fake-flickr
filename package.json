@@ -6,13 +6,17 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:studio": "drizzle-kit studio",
+    "db:push": "drizzle-kit push"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^6.1.0",
+    "@next/env": "^14.2.10",
     "@vercel/postgres": "^0.10.0",
+    "drizzle-orm": "^0.33.0",
     "next": "14.2.9",
     "react": "^18",
     "react-dom": "^18"
@@ -21,6 +25,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "drizzle-kit": "^0.24.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.9",
     "postcss": "^8",
