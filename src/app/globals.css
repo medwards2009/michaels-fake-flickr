@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 :root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+/* 
+  the following creates vars that would create a dark theme and light them
+  for now we will lock it into dark theme
+*/
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -12,7 +21,7 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
