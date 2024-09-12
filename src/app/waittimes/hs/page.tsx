@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 export default async function Hollywood() {
   const res = await fetch(
     "https://api.themeparks.wiki/preview/parks/WaltDisneyWorldHollywoodStudios/waittime"
