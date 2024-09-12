@@ -6,7 +6,7 @@ export function TopNav() {
       <div className="flex gap-4">
         <Link href={"/"}>Home</Link>
         <Link href={"/mypics"}>My Pics</Link>
-        <Link href={"/waittimes"}>Wait times</Link>
+        <Link href={"/waittimes/mk"}>Wait times</Link>
       </div>
       <div>
         <button>Sign In</button>
