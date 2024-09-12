@@ -5,7 +5,6 @@ export const dynamic = "force-dynamic";
 
 export default async function Home() {
   const images = await getImages();
-  console.log(images);
 
   return (
     <div className="font-[family-name:var(--font-geist-sans)] p-4">
