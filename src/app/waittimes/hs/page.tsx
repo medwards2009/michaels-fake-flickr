@@ -2,7 +2,8 @@ export const dynamic = "force-dynamic";
 
 export default async function Hollywood() {
   const res = await fetch(
-    "https://api.themeparks.wiki/preview/parks/WaltDisneyWorldHollywoodStudios/waittime"
+    "https://api.themeparks.wiki/preview/parks/WaltDisneyWorldHollywoodStudios/waittime",
+    { method: "get", referrerPolicy: "no-referrer" }
   );
   const data = await res.json();
 
