@@ -7,7 +7,8 @@ const Magic = () => {
     queryKey: ["repoData"],
     queryFn: async () => {
       const response = await fetch(
-        "https://api.themeparks.wiki/preview/parks/WaltDisneyWorldMagicKingdom/waittime"
+        "https://api.themeparks.wiki/preview/parks/WaltDisneyWorldMagicKingdom/waittime",
+        { method: "get", referrerPolicy: "no-referrer" }
       );
       return await response.json();
     },
