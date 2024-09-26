@@ -1,6 +1,6 @@
 export interface WaitTime {
   id: string;
-  waitTime: number | null;
+  waitTime: number | string | null;
   status: string;
   active: boolean;
   lastUpdate: string;
