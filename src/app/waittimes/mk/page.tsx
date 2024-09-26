@@ -1,6 +1,8 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
+import WaitTimesWrapper from "../_components/WaitTimesWrapper";
+import Row from "../_components/Row";
 
 const Magic = () => {
   const { error, data, isFetching } = useQuery({
@@ -15,23 +17,22 @@ const Magic = () => {
   });
 
   return (
-    <div className="flex justify-center w-full h-fit p-4">
-      <div className="border h-fit rounded-lg flex flex-col">
-        <h1 className="flex justify-center">Magic Kingdom - CSR</h1>
-        {isFetching && <p className="border-t p-2">Loading...</p>}
-        {error && <p className="border-t p-2">{error.message}</p>}
-        {data &&
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          data.map((ride: any) => {
-            return (
-              <div key={ride.id} className="flex justify-between border-t p-2">
-                <p>{ride.name}</p>
-                <p>{ride.waitTime || ""}</p>
-              </div>
-            );
-          })}
-      </div>
-    </div>
+    <WaitTimesWrapper title="Magic Kingdom - CSR">
+      {isFetching && <p className="border-t p-2">Loading...</p>}
+      {error && <p className="border-t p-2">{error.message}</p>}
+      {data &&
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        data.map((ride: any) => {
+          return (
+            <Row
+              key={ride.id}
+              id={ride.id}
+              name={ride.name}
+              waitTime={ride.waitTime || ""}
+            />
+          );
+        })}
+    </WaitTimesWrapper>
   );
 };
 

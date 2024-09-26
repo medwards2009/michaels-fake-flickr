@@ -1,15 +1,22 @@
 import Link from "next/link";
+import { Button } from "@mui/material";
 
 export function TopNav() {
   return (
-    <nav className="flex border-b w-full justify-between p-4">
+    <nav className="flex border-b-2 w-full justify-between p-4">
       <div className="flex gap-4">
-        <Link href={"/"}>Home</Link>
-        <Link href={"/mypics"}>My Pics</Link>
-        <Link href={"/waittimes/mk"}>Wait times</Link>
+        <Link href={"/"}>
+          <Button>Home</Button>
+        </Link>
+        <Link href={"/mypics"}>
+          <Button>My pics</Button>
+        </Link>
+        <Link href={"/waittimes/mk"}>
+          <Button>Wait times</Button>
+        </Link>
       </div>
       <div>
-        <button>Sign In</button>
+        <Button>Sign In</Button>
       </div>
     </nav>
   );
