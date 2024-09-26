@@ -3,6 +3,7 @@
 import { useQuery } from "@tanstack/react-query";
 import WaitTimesWrapper from "../_components/WaitTimesWrapper";
 import Row from "../_components/Row";
+import LoadingScreen from "../_components/LoadingScreen";
 
 const Magic = () => {
   const { error, data, isFetching } = useQuery({
@@ -16,9 +17,10 @@ const Magic = () => {
     },
   });
 
+  if (isFetching) return <LoadingScreen />;
+
   return (
     <WaitTimesWrapper title="Magic Kingdom - CSR">
-      {isFetching && <p className="border-t p-2">Loading...</p>}
       {error && <p className="border-t p-2">{error.message}</p>}
       {data &&
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
