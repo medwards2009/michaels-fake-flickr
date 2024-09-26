@@ -31,6 +31,13 @@ body {
   height: 100vh;
 }
 
+button {
+  @apply p-2;
+}
+button:hover {
+  @apply bg-slate-400 rounded;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

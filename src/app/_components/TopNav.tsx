@@ -4,7 +4,7 @@ import { Button } from "@mui/material";
 export function TopNav() {
   return (
     <nav className="flex border-b-2 w-full justify-between p-4">
-      <div className="flex gap-4">
+      <div className="flex gap-2">
         <Link href={"/"}>
           <Button>Home</Button>
         </Link>
