@@ -1,16 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import WaitTimesWrapper from "../_components/WaitTimesWrapper";
 import Row from "../_components/Row";
 import LoadingScreen from "../../_components/LoadingScreen";
-import { WaitTime } from "../../../../types/waitTime";
+// import { WaitTime } from "../../../../types/waitTime";
 import FilterTimes from "../_utils/FilterTimes";
 
 const Magic = () => {
-  const [filteredResults, setFilteredResults] = useState<WaitTime[]>([]);
-
   const { error, data, isFetching } = useQuery({
     queryKey: ["repoData"],
     queryFn: async () => {
@@ -21,14 +19,9 @@ const Magic = () => {
     },
   });
 
-  useEffect(() => {
-    if (data) {
-      const filteredTimes = FilterTimes(data);
-      setFilteredResults(filteredTimes);
-    }
-  }, [data]);
+  if (isFetching) return <LoadingScreen />;
 
-  if (isFetching || filteredResults.length < 1) return <LoadingScreen />;
+  const filteredResults = FilterTimes(data);
 
   return (
     <WaitTimesWrapper title="Magic Kingdom - CSR">
