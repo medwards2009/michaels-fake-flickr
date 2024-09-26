@@ -10,8 +10,7 @@ const Magic = () => {
     queryKey: ["repoData"],
     queryFn: async () => {
       const response = await fetch(
-        "https://api.themeparks.wiki/preview/parks/WaltDisneyWorldMagicKingdom/waittime",
-        { method: "get", referrerPolicy: "no-referrer" }
+        "https://michaels-fake-flickr.vercel.app/api/mk-times"
       );
       return await response.json();
     },
