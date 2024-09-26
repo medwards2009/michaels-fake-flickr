@@ -3,7 +3,7 @@
 import { useQuery } from "@tanstack/react-query";
 import WaitTimesWrapper from "../_components/WaitTimesWrapper";
 import Row from "../_components/Row";
-import LoadingScreen from "../_components/LoadingScreen";
+import LoadingScreen from "../../_components/LoadingScreen";
 
 const Magic = () => {
   const { error, data, isFetching } = useQuery({
