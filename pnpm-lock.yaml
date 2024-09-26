@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@emotion/cache':
+        specifier: ^11.13.1
+        version: 11.13.1
       '@emotion/react':
         specifier: ^11.13.3
         version: 11.13.3(@types/react@18.3.5)(react@18.3.1)
@@ -17,6 +20,9 @@ importers:
       '@mui/material':
         specifier: ^6.1.0
         version: 6.1.0(@emotion/react@11.13.3(@types/react@18.3.5)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(@types/react@18.3.5)(react@18.3.1))(@types/react@18.3.5)(react@18.3.1))(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@mui/material-nextjs':
+        specifier: ^6.1.1
+        version: 6.1.1(@emotion/cache@11.13.1)(@emotion/react@11.13.3(@types/react@18.3.5)(react@18.3.1))(@types/react@18.3.5)(next@14.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@next/env':
         specifier: ^14.2.10
         version: 14.2.10
@@ -509,6 +515,24 @@ packages:
 
   '@mui/core-downloads-tracker@6.1.0':
     resolution: {integrity: sha512-covEnIn/2er5YdtuukDRA52kmARhKrHjOvPsyTFMQApZdrTBI4h8jbEy2mxZqwMwcAFS9coonQXnEZKL1rUNdQ==}
+
+  '@mui/material-nextjs@6.1.1':
+    resolution: {integrity: sha512-6c8cjYbNnOfu5stZLFWTVr14BS8sOK592FeEYqEGVcMqIE+kSNnNZpw6Z+iHCjvkTn67t/dASE3GVrFjCFUlQw==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      '@emotion/cache': ^11.11.0
+      '@emotion/react': ^11.11.4
+      '@emotion/server': ^11.11.0
+      '@types/react': ^17.0.0 || ^18.0.0 || ^19.0.0
+      next: ^13.0.0 || ^14.0.0
+      react: ^17.0.0 || ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@emotion/cache':
+        optional: true
+      '@emotion/server':
+        optional: true
+      '@types/react':
+        optional: true
 
   '@mui/material@6.1.0':
     resolution: {integrity: sha512-4MJ46vmy1xbm8x+ZdRcWm8jEMMowdS8pYlhKQzg/qoKhOcLhImZvf2Jn6z9Dj6gl+lY+C/0MxaHF/avAAGys3Q==}
@@ -2741,6 +2765,16 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.0
 
   '@mui/core-downloads-tracker@6.1.0': {}
+
+  '@mui/material-nextjs@6.1.1(@emotion/cache@11.13.1)(@emotion/react@11.13.3(@types/react@18.3.5)(react@18.3.1))(@types/react@18.3.5)(next@14.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.6
+      '@emotion/react': 11.13.3(@types/react@18.3.5)(react@18.3.1)
+      next: 14.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 18.3.1
+    optionalDependencies:
+      '@emotion/cache': 11.13.1
+      '@types/react': 18.3.5
 
   '@mui/material@6.1.0(@emotion/react@11.13.3(@types/react@18.3.5)(react@18.3.1))(@emotion/styled@11.13.0(@emotion/react@11.13.3(@types/react@18.3.5)(react@18.3.1))(@types/react@18.3.5)(react@18.3.1))(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
