@@ -7,7 +7,10 @@ export const dynamic = "force-dynamic";
 
 export default async function Hollywood() {
   const res = await fetch(
-    "https://api.themeparks.wiki/preview/parks/WaltDisneyWorldHollywoodStudios/waittime"
+    "https://api.themeparks.wiki/preview/parks/WaltDisneyWorldHollywoodStudios/waittime",
+    {
+      cache: "no-cache",
+    }
   );
   const data: WaitTime[] = await res.json();
   const filteredResults = FilterTimes(data);
