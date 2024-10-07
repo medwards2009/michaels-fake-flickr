@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@mui/material";
+import SignInButton from "./SignInButton";
 
 export function TopNav() {
   return (
@@ -16,7 +17,7 @@ export function TopNav() {
         </Link>
       </div>
       <div>
-        <Button>Sign In</Button>
+        <SignInButton />
       </div>
     </nav>
   );

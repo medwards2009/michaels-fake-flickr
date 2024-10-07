@@ -12,9 +12,7 @@ const useGetMkTimes = (): useGetMkTimesReturnType => {
   const { error, data, isFetching, refetch } = useQuery({
     queryKey: ["repoData"],
     queryFn: async () => {
-      const response = await fetch(
-        "https://michaels-fake-flickr.vercel.app/api/mk-times"
-      );
+      const response = await fetch("/api/mk-times");
       return await response.json();
     },
   });
