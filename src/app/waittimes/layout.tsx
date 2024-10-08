@@ -15,7 +15,7 @@ export default function Layout({
     <QueryClientProvider client={queryClient}>
       <div className="wait_times_gridcontainer">
         <SideNav />
-        {children}
+        <div className="overflow">{children}</div>
       </div>
     </QueryClientProvider>
   );

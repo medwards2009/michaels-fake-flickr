@@ -36,7 +36,6 @@ body {
   display: grid;
   grid-template-rows: [first] 75px auto [end];
 }
-
 .wait_times_gridcontainer {
   display: grid;
   grid-template-columns: [first] 250px auto [end];
@@ -47,10 +46,18 @@ body {
   top: 0px;
 }
 
+.page-content {
+  height: 100%;
+}
+
 .side-nav {
   position: sticky;
-  align-self: start;
   top: 75px;
+  height: calc(100vh - 75px);
+}
+
+.overflow {
+  overflow: auto;
 }
 
 .white-background {

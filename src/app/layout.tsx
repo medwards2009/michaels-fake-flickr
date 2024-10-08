@@ -30,7 +30,7 @@ export default function RootLayout({
           <ThemeProvider theme={theme}>
             <div className="gridcontainer">
               <TopNav />
-              <div>{children}</div>
+              <div className="page-content">{children}</div>
             </div>
           </ThemeProvider>
         </AppRouterCacheProvider>
