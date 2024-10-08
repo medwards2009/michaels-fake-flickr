@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 
 const SideNav = () => {
   return (
-    <nav className="border-r-2 flex flex-col gap-4 p-4 white-background side-nav">
+    <nav className="border-r-2 flex flex-col gap-4 p-4 white-background">
       <Link href="/waittimes/mk">
         <Button>Magic Kingdom</Button>
       </Link>
