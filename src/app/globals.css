@@ -29,6 +29,32 @@ body {
   /* color: var(--foreground); */
   /* background: var(--background); */
   height: 100vh;
+  background-color: aliceblue;
+}
+
+.gridcontainer {
+  display: grid;
+  grid-template-rows: [first] 75px auto [end];
+}
+
+.wait_times_gridcontainer {
+  display: grid;
+  grid-template-columns: [first] 250px auto [end];
+}
+
+.top-nav {
+  position: sticky;
+  top: 0px;
+}
+
+.side-nav {
+  position: sticky;
+  align-self: start;
+  top: 75px;
+}
+
+.white-background {
+  background-color: white;
 }
 
 button {

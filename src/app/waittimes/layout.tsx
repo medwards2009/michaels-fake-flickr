@@ -12,11 +12,11 @@ export default function Layout({
   const queryClient = new QueryClient();
 
   return (
-    <div className="flex h-full">
-      <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={queryClient}>
+      <div className="wait_times_gridcontainer">
         <SideNav />
         {children}
-      </QueryClientProvider>
-    </div>
+      </div>
+    </QueryClientProvider>
   );
 }

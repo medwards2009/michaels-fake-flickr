@@ -4,7 +4,7 @@ import SignInButton from "./SignInButton";
 
 export function TopNav() {
   return (
-    <nav className="flex border-b-2 w-full justify-between p-4">
+    <nav className="flex border-b-2 justify-between p-4 white-background top-nav">
       <div className="flex gap-2">
         <Link href={"/"}>
           <Button>Home</Button>

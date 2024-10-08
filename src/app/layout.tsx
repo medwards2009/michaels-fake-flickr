@@ -28,8 +28,10 @@ export default function RootLayout({
       <body className={roboto.variable}>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ThemeProvider theme={theme}>
-            <TopNav />
-            <div className="h-auto">{children}</div>
+            <div className="gridcontainer">
+              <TopNav />
+              <div>{children}</div>
+            </div>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
