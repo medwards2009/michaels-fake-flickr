@@ -6,7 +6,7 @@ interface RowProps {
 
 const Row: React.FC<RowProps> = ({ id, name, waitTime }) => {
   return (
-    <div key={id} className="flex justify-between border-t-2 p-2 gap-14">
+    <div key={id} className="flex justify-between p-2 gap-20">
       <p>{name}</p>
       <p>{waitTime || ""}</p>
     </div>

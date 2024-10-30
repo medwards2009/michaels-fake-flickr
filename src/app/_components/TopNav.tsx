@@ -12,6 +12,9 @@ export function TopNav() {
         <Link href={"/mypics"}>
           <Button>My pics</Button>
         </Link>
+        <Link href={"/serveractiondemo"}>
+          <Button>Form demo</Button>
+        </Link>
         <Link href={"/waittimes/mk"}>
           <Button>Wait times</Button>
         </Link>
